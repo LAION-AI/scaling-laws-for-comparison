@@ -17,7 +17,7 @@ import argparse
 import warnings
 from .fitting_utils import fit_bootstrap
 from .saving_utils import save_figure
-from .loss_curve_only_plot import plot_scaling_curve_by_mode, plot_scaling_curve
+from .loss_curve_only_plot import plot_scaling_curve
 import json
 from scipy import stats
 
