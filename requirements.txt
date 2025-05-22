@@ -6,3 +6,4 @@ scipy
 alphashape
 scikit-learn
 tqdm
+fastparquet
