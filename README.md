@@ -1,4 +1,8 @@
-## Overview
+# Scaling Laws for Comparison of Open Foundation Language-Vision Models and Datasets
+
+In this repository, we provide detailed results and code to reproduce all figures from the paper.
+
+## Detailed Results
 
 In [overview.ipynb](overview.ipynb), you can view detailed results of all models that we
 trained.
@@ -12,4 +16,4 @@ To execute all the scripts in the correct order and reproduce the figures from t
 bash reproduce_all_figures.sh
 ```
 
-The master script will run each figure script and generate the corresponding plots in the `scaling_laws/derived_scaling_laws` directory.
+The master script will run each figure script and generate the corresponding plots in the `scaling_laws/derived_scaling_laws`directory.
