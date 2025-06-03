@@ -1,0 +1,216 @@
+eval_time: 360
+job_id_regexp: "Job Id:(\\d+)"
+cmd: "sbatch {sbatch_script}"
+check_interval_secs: 600
+partition: booster
+account: transfernetx
+experiments:
+  small:
+    model_scale:
+        model: [mammut_ViT-S-32, mammut_ViT-M-32, mammut_ViT-S-16, mammut_ViT-B-32, mammut_ViT-B-16, mammut_ViT-L-14, mammut_ViT-H-14]
+        contrastive_weight: 0
+        caption_weight: 1
+        mammut: true
+        coca: false
+        siglip: false
+        beta1: 0.9
+        beta2: 0.95
+        wd: 0.2
+        grad_clip_norm: 1
+    samples_seen_scale:
+        - 1.28M_bs_512_gpu_4:
+            lr: [1e-4, 5e-4, 1e-3, 1.5e-3, 2e-3]
+            batch_size: 128
+            nodes: 1
+            train_num_samples: 128_000
+            epochs: 10
+            warmup: [500, 1000, 1500]
+        - 1.28M_bs_256_gpu_4:
+            lr: [1e-4, 5e-4, 1e-3, 1.5e-3, 2e-3]
+            batch_size: 64
+            nodes: 1
+            train_num_samples: 128_000
+            epochs: 10
+            warmup: [500, 1000, 2000, 3000]
+        - 1.28M_bs_512:
+            lr: [1e-4, 5e-4, 1e-3, 1.5e-3, 2e-3]
+            batch_size: 128
+            nodes: 1
+            train_num_samples: 128_000
+            epochs: 10
+            warmup: [1000, 1500]
+        - 3M_bs_1024:
+            lr: [5e-4, 1e-3]
+            batch_size: 256
+            nodes: 1
+            train_num_samples: 256_000
+            epochs: 12
+            warmup: [1500, 2000]
+        - 3M_bs_512:
+            lr: [5e-4, 1e-3]
+            batch_size: 128
+            nodes: 1
+            train_num_samples: 256_000
+            epochs: 12
+            warmup: [3000, 4000]
+        - 12.8M_bs_2048_gpu_16:
+            lr: [5e-4, 1e-3, 1.5e-3, 2e-3, 2.5e-3, 3e-3, 4e-3]
+            batch_size: 128
+            nodes: 4
+            train_num_samples: 1_280_000
+            epochs: 10
+            warmup: [500, 1000, 1500, 2000, 2500, 3000, 4000]
+        - 12.8M_bs_2048:
+            lr: [5e-4, 1e-3, 2e-3, 3e-3]
+            batch_size: 128
+            nodes: 4
+            train_num_samples: 1_280_000
+            epochs: 10
+            warmup: [3000, 4000]
+        - 30M_bs_4096:
+            lr: [1e-3, 2e-3]
+            batch_size: 256
+            nodes: 4
+            train_num_samples: 2_560_000
+            epochs: 12
+            warmup: [3000, 4000]
+        - 30M_bs_2048:
+            lr: [1e-3, 2e-3]
+            batch_size: 256
+            nodes: 2
+            train_num_samples: 2_560_000
+            epochs: 12
+            warmup: [4000, 8000]
+        - 128M_bs_8192_gpu_64:
+            lr: [2e-3, 3e-3]
+            batch_size: 128
+            nodes: 16
+            train_num_samples: 6_400_000
+            epochs: 20
+            warmup: [2000, 4000, 6000]
+        - 128M_bs_8192:
+            lr: [2e-3, 3e-3]
+            batch_size: 128
+            nodes: 16
+            train_num_samples: 6_400_000
+            epochs: 20
+            warmup: [2000, 4000, 6000]
+        - 300M_bs_16384:
+            lr: [1e-3, 2e-3]
+            batch_size: 256
+            nodes: 16
+            train_num_samples: 12_800_000
+            epochs: 24
+            warmup: [4000, 8000]
+        - 300M_bs_32768:
+            lr: [1e-3, 2e-3]
+            batch_size: 512
+            nodes: 16
+            train_num_samples: 12_800_000
+            epochs: 24
+            warmup: [3000, 4000]
+        - 1.28B_bs_90624_gpu_256:
+            lr: [1.5e-3, 2e-3, 2.5e-3, 3e-3, 3.5e-3, 4e-3, 5e-3, 1e-2]
+            batch_size: 354
+            nodes: 64
+            train_num_samples: 64_000_000
+            epochs: 20
+            warmup: [2000, 4000, 6000, 10000]
+        - 1.28B_bs_90624:
+            lr: [5e-4, 1e-3, 1.5e-3, 2e-3, 2.5e-3, 3e-3, 3.5e-3, 4e-3, 5e-3, 1e-2]
+            batch_size: 354
+            nodes: 64
+            train_num_samples: 64_000_000
+            epochs: 20
+            warmup: [4000, 6000, 10000]
+        - 1.28B_bs_16384:
+            lr: [1e-3, 1.5e-3, 2e-3]
+            batch_size: 256
+            nodes: 16
+            train_num_samples: 64_000_000
+            epochs: 20
+            warmup: [4000, 10000, 15000, 20000]
+        - 1.28B_bs_32768:
+            lr: [1e-3, 1.5e-3, 2e-3]
+            batch_size: 256
+            nodes: 32
+            train_num_samples: 64_000_000
+            epochs: 20
+            warmup: [4000, 10000, 15000, 20000]
+        - 1.28B_bs_32640:
+            lr: [1e-3, 1.5e-3, 2e-3]
+            batch_size: 170
+            nodes: 48
+            train_num_samples: 64_000_000
+            epochs: 20
+            warmup: [4000, 10000, 15000, 20000]
+        - 3B_bs_45312:
+            lr: [2e-3]
+            batch_size: 354
+            nodes: 32
+            train_num_samples: 64_000_000
+            epochs: 48
+            warmup: [4000, 15000]
+        - 3B_bs_32768:
+            lr: [2e-3]
+            batch_size: 256
+            nodes: 32
+            train_num_samples: 64_000_000
+            epochs: 48
+            warmup: [4000, 15000]
+        - 3B_bs_90624:
+            lr: [2e-3, 3e-3, 5e-3, 1e-2]
+            batch_size: 354
+            nodes: 64
+            train_num_samples: 64_000_000
+            epochs: 48
+            warmup: [4000, 10000, 15000]
+        - 3B_bs_181248:
+            lr: [2e-3, 3e-3]
+            batch_size: 354
+            nodes: 128
+            train_num_samples: 64_000_000
+            epochs: 48
+            warmup: [4000, 10000]
+        - 3B_bs_91136:
+            lr: [1e-3, 2e-3, 4e-3]
+            batch_size: 178
+            nodes: 128
+            train_num_samples: 64_000_000
+            epochs: 48
+            warmup: [4000, 10000]
+        - 12.8B_bs_180224:
+            lr: [2.5e-3, 1.5e-3]
+            batch_size: 176
+            nodes: 256
+            train_num_samples: 128_000_000
+            epochs: 100
+            warmup: [6000, 10000, 15000]
+mode:
+  - train:
+      template: /p/project/laionize/cherti1/open_clip_scaling/configs/cap_mammut/train_template.sbatch
+      sbatch_script: "/p/project/laionize/cherti1/open_clip_scaling/sbatch_scripts/cap_mammut/{name}_train.sbatch"
+      output_file: "{logs}/{name}/slurm_train.out"
+      # terminate training if we detect that last epoch is finished
+      # e.g. if number of epochs is 100 and we find the expression Train Epoch: 99 .... 100%, we return 1
+      # thus terminating the job.
+      # termination_cmd: 'let last={epochs}-1;grep "Train Epoch: $last.*100%" {output_file}|wc -l'
+      # CAREFUL! Sometimes 100% message for last epoch happens multiple times, not just once
+      termination_cmd: 'let last={epochs}-1; ne=`grep "Train Epoch: $last.*100%" {logs}/{name}/out.log|wc -l`; echo $(( (ne) >= 1 ))'
+  - eval:
+      template: /p/project/laionize/cherti1/open_clip_scaling/configs/cap_mammut/eval_template.sbatch
+      sbatch_script: "/p/project/laionize/cherti1/open_clip_scaling/sbatch_scripts/cap_mammut/{name}_eval.sbatch"
+      output_file: "{logs}/{name}/slurm_eval.out"
+      eval_nodes: 16
+      start_condition_cmd: "nc=`ls {logs}/{name}/checkpoints/epoch_[0-9]*.pt|wc -l`;ne=`ls {logs}/{name}/checkpoints/*epoch_[0-9]*.json|wc -l`;echo $(( (nc*9-ne) > 0 ))" # imagenet + winoground + sugar crepe = 1 + 1 + 7
+      # we only terminate evals when number of evals is equal to number of epochs
+      termination_cmd: "ne=`ls {logs}/{name}/checkpoints/*epoch_[0-9]*.json|wc -l`;echo $(( (ne) == {epochs}*9 ))" # num of jsons = (num epochs) * (imagenet + winoground + sugar crepe = 9)
+dataset: 
+    - datacomp:
+        train_data: "/p/data1/mmlaion/datacomp/datacomp_1B/flat/{0000000..0139827}.tar"
+    - datacomp_recap:
+        train_data: "/p/scratch/laionize/cherti1/datacomp_1B_recap/{0000000..0139827}.tar"
+logs: "/p/data1/mmlaion/cherti1/open_clip_scaling/logs/cap_mammut"
+name: "{dataset}_s{samples_seen_scale}_{model}_ep{epochs}_lr{lr}_b1_{beta1}_b2_{beta2}_wd{wd}_w{warmup}_gc{grad_clip_norm}_n{nodes}_bs{batch_size}_sig{siglip}_consw{contrastive_weight}_cw{caption_weight}"
+full_name: "{name}_{mode}"
+folder_name: "{name}"

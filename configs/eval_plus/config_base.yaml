@@ -1,0 +1,14 @@
+template: eval.sbatch
+time: 360
+nodes_small: 2
+nodes_big: 16
+job_id_regexp: "Job Id:(\\d+)"
+cmd: "sbatch {sbatch_script}"
+check_interval_secs: 600
+partition: booster
+account: transfernetx
+name: "{full_name}"
+sbatch_script: "scripts/{name}.sbatch"
+output_file: "{folder_name}/slurm_eval_plus_{suite_name}_{task}.out"
+start_condition_cmd: "nc=`ls {folder_name}/checkpoints/*epoch_[0-9]*.pt|wc -l`;ne=`ls {folder_name}/checkpoints/eval_plus_{suite_name}*epoch_[0-9]*_{language}_{task}.json|wc -l`;echo $(( (nc*{nb_datasets}-ne) > 0 ))"
+termination_cmd: "ne=`ls {folder_name}/checkpoints/eval_plus_{suite_name}*epoch_[0-9]*_{language}_{task}.json|wc -l`;echo $(( (ne) == {epochs}*{nb_datasets} ))"
