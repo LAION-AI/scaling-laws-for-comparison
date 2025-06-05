@@ -1,4 +1,6 @@
-# Scaling Laws for Comparison of Open Foundation Language-Vision Models and Datasets
+# Scaling Laws for Comparison of Open Foundation Language-Vision Models and Datasets  [[arXiv]](https://arxiv.org/abs/)
+
+*by Marianna Nezhurina, Tomer Porian, Giovanni Pucceti, Tommie Kerssies, Romain Beaumont, Mehdi Cherti, Jenia Jitsev* [[arXiv:]](https://arxiv.org/abs/)
 
 In this repository, we provide detailed results and code to reproduce all figures from the paper.
 
@@ -17,3 +19,15 @@ bash reproduce_all_figures.sh
 ```
 
 The master script will run each figure script and generate the corresponding plots in the `scaling_laws/derived_scaling_laws`directory.
+
+## Citation
+
+If you find this work helpful, please cite our paper:
+
+```bibtex
+@inproceedings{,
+  title={Scaling Laws for Comparison of Open Foundation Language-Vision Models and Datasets},
+  author={},
+  year={2025}
+}
+```
