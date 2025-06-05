@@ -48,6 +48,8 @@ The master script will run each figure script and generate the corresponding plo
 OpenMaMMUT-L-14 12.8B is a large scale open vision-language foundation model, trained using insights from scaling analysis to guide choice of model and samples seen scale.
 OpenMaMMUT-L-14 12.8B achieves **state of the art performance** on zero-shot classification and retrieval tasks among similar-sized models trained only on publicly-available data (MetaCLIP, DataComp, OpenVision).  It outperforms with $80.34$\% IN1k zero-shot accuracy - as predicted from scaling laws - openCLIP pre-trained on same DataComp-1.4B budget of 12.8B samples seen ($79.2$\%) and even rivals models with much larger pre-training compute like SigLIP. OpenMaMMUT represents a highly performant, fully reproducible alternative to other models with **openly available data and training code**. Note that on 12.8B samples seen scale the performance suffers from high amount of repetitions, and therefore is below our prediction of $82.0$\% (see Table 1 above and [[arXiv:]](https://arxiv.org/abs/) for more details) that is valid for training on unique samples.
 
+HuggingFace Model Repo: [OpenMaMMUT-L-14 12.8B DataComp-1.4B](https://huggingface.co/laion/openMaMMUT-ViT-L-14-DataComp-1.4B-s12.8B-b180K)
+
 ### OpenMammut-L-14 12.8B performance in comparison to other reference models
 
 <img src="https://cdn-uploads.huggingface.co/production/uploads/6355b485b8b79340d4630dd5/bLHbtJ66mxs6ErKaqbXe9.png" alt="openmammut_hyperparams" width="80%"/>
