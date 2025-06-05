@@ -25,9 +25,9 @@ The master script will run each figure script and generate the corresponding plo
 If you find this work helpful, please cite our paper:
 
 ```bibtex
-@inproceedings{,
-  title={Scaling Laws for Comparison of Open Foundation Language-Vision Models and Datasets},
+@article{nezhurina2025,
+  title={Scaling Laws for Robust Comparison of Open Foundation Language-Vision Models and Datasets},
   author={},
+  journal={arXiv},
   year={2025}
-}
-```
+}```
