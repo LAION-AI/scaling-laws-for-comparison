@@ -1,4 +1,4 @@
-# Scaling Laws for Comparison of Open Foundation Language-Vision Models and Datasets  [[arXiv]](https://arxiv.org/abs/)
+# Scaling Laws for Robust Comparison of Open Foundation Language-Vision Models and Datasets  [[arXiv]](https://arxiv.org/abs/)
 
 *by Marianna Nezhurina, Tomer Porian, Giovanni Pucceti, Tommie Kerssies, Romain Beaumont, Mehdi Cherti, Jenia Jitsev* [[arXiv:]](https://arxiv.org/abs/)
 
@@ -25,9 +25,9 @@ The master script will run each figure script and generate the corresponding plo
 If you find this work helpful, please cite our paper:
 
 ```bibtex
-@article{nezhurina2025,
+@article{nezhurina2025scaling,
   title={Scaling Laws for Robust Comparison of Open Foundation Language-Vision Models and Datasets},
-  author={},
+  author={Marianna Nezhurina, Tomer Porian, Giovanni Pucceti, Tommie Kerssies, Romain Beaumont, Mehdi Cherti, Jenia Jitsev},
   journal={arXiv},
   year={2025}
 }```
