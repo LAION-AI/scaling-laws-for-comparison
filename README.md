@@ -57,9 +57,6 @@ HuggingFace Model Repo: [OpenMaMMUT-L-14 12.8B DataComp-1.4B](https://huggingfac
 ### Training hyperparameters
 <img src="https://cdn-uploads.huggingface.co/production/uploads/6355b485b8b79340d4630dd5/3m_kj2FTOcOkuucb1qeFd.png" alt="openmammut_hyperparams" width="40%"/>
 
-
-
-
 ## Citation
 
 If you find this work helpful, please cite our paper:
@@ -71,4 +68,16 @@ If you find this work helpful, please cite our paper:
   journal={arXiv:2506.04598},
   url={https://arxiv.org/abs/2506.04598},
   year={2025}
-}```
+}
+```
+
+## Acknowledgements
+
+Authors acknowledge funding by the Federal Ministry of Education and Research of Germany (BMBF) under grant no. 01IS24085C (OPENHAFM), under the grant 16HPC117K (MINERVA) and under the grant no. 01IS22094B (WestAI - AI Service Center West), as well as co-funding by EU from EuroHPC Joint Undertaking programm under grant no. 101182737 (MINERVA) and from Digital Europe Programme under grant no. 101195233 (openEuroLLM).
+
+Authors acknowledge the Gauss Centre for Supercomputing e.V. for funding this work by providing computing time through the John von Neumann Institute for Computing (NIC) on the supercomputer JUWELS Booster at Jülich Supercomputing Centre (JSC), EuroHPC Joint Undertaking for computing time and storage on the EuroHPC supercomputer LEONARDO, hosted by CINECA (Italy) and the LEONARDO consortium through an EuroHPC Extreme Access grant EHPC-EXT-2023E02-068, storage resources on JUST granted and operated by JSC and supported by Helmholtz Data Federation (HDF), computing time granted by the JARA and JSC on the supercomputer JURECA at JSC, and computing time granted on prototype JEDI via JUREAP (JUPITER Early Access Programm) grant at JSC. 
+
+Further thanks go for support provided by supercomputing facilities and their teams, especially to Damian Alvarez and Mathis Bode from Juelich Supercomputer Center (JSC, Germany) and to Laura Morselli from CINECA (Italy).
+
+Authors also would like to express gratitude to all the people who are working on making code, models and data publicly available, advancing community based research and making research more reproducible. Specifically, we would like to thank all the members of the [LAION Discord server](https://discord.gg/BZqhreFazY) community and [Open-$\Psi$ (Open-Sci) Collective](https://discord.gg/GsKh4mBVcv) for providing fruitful ground for scientific exchange and open-source development. 
+
