@@ -69,7 +69,7 @@ If you find this work helpful, please cite our paper:
 ```bibtex
 @article{nezhurina2025scaling,
   title={Scaling Laws for Robust Comparison of Open Foundation Language-Vision Models and Datasets},
-  author={Marianna Nezhurina, Tomer Porian, Giovanni Pucceti, Tommie Kerssies, Romain Beaumont, Mehdi Cherti, Jenia Jitsev},
+  author={Nezhurina, Marianna and Porian, Tomer and Pucceti, Giovanni and Kerssies, Tommie and Beaumont, Romain and Cherti, Mehdi and Jitsev, Jenia},
   journal={arXiv:2506.04598},
   url={https://arxiv.org/abs/2506.04598},
   year={2025}
