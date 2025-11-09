@@ -1,6 +1,6 @@
 # Scaling Laws for Robust Comparison of Open Foundation Language-Vision Models and Datasets  [[arXiv:2506.04598]](https://arxiv.org/abs/2506.04598)
 
-*by Marianna Nezhurina, Tomer Porian, Giovanni Pucceti, Tommie Kerssies, Romain Beaumont, Mehdi Cherti, Jenia Jitsev* [[arXiv:2506.04598]](https://arxiv.org/abs/2506.04598) [NeurIPS 2025](https://openreview.net/forum?id=cWnZLIdeKn)
+*by Marianna Nezhurina, Tomer Porian, Giovanni Puccetti, Tommie Kerssies, Romain Beaumont, Mehdi Cherti, Jenia Jitsev* [[arXiv:2506.04598]](https://arxiv.org/abs/2506.04598) [NeurIPS 2025](https://openreview.net/forum?id=cWnZLIdeKn)
 
 In this repository, we provide detailed results and code to reproduce all figures from the paper.
 
