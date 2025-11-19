@@ -88,6 +88,7 @@ See `python download_models.py -h` for more information.
 ## Using a downloaded model
 
 After downloading a model, it is possible to load it in OpenCLIP directly.
+
 For instance, if you would like to use the best ViT-B-32 MaMMUT model at 12.8B samples seen scale, run the following command:
 
 ```bash
