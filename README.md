@@ -62,7 +62,7 @@ HuggingFace Model Repo, with examples of model usage: [OpenMaMMUT-L-14 12.8B Dat
 ### Training hyperparameters
 <img src="https://cdn-uploads.huggingface.co/production/uploads/6355b485b8b79340d4630dd5/3m_kj2FTOcOkuucb1qeFd.png" alt="openmammut_hyperparams" width="40%"/>
 
-## Downloading model checkpoints
+## Downloading all model checkpoints
 
 We are currently working on uploading all model checkpoints (including intermediate checkpoints) to HuggingFace in the following repo: <https://huggingface.co/laion/scaling-laws-for-comparison>.
 
