@@ -139,7 +139,7 @@ from PIL import Image
 
 model, _, transform = open_clip.create_model_and_transforms('mammut_ViT-B-32', pretrained='download/mammut_ViT-B-32_s12.8B_dfn_2b_globalbs180224_lr0.0025_b1_0.9_b2_0.95_sched_cosine_warmup6000_gpus512/epoch_latest.pt')
 
-im = Image.open("docs/CLIP.png").convert("RGB")
+im = Image.open("image.png").convert("RGB")
 im = transform(im).unsqueeze(0)
 
 with torch.no_grad(), torch.amp.autocast('cuda'):
