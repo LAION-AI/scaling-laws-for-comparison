@@ -73,7 +73,10 @@ To download all models, run the following command:
 python download_models.py
 ```
 
-It is also possible to filter the models by using the arguments of the script. For example, to download only MaMMUT models trained on datacomp-1.4B dataset, with samples seen scale 1.28B, ViT-B-32 architecture, run the following command:
+It is also possible to filter the models by using the arguments of the script. 
+
+For example, to download only MaMMUT models trained on datacomp-1.4B dataset, with samples seen scale 1.28B, ViT-B-32 architecture, run the following command:
+
 ```bash
 python download_models.py --samples_seen 1.28B --pretrain_dataset datacomp_1b --model_name ViT-B-32 --model_type mammut
 ```
