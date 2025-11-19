@@ -85,6 +85,68 @@ By default, only last checkpoint of each model is downloaded, not intermediate c
 
 See `python download_models.py -h` for more information.
 
+## Using a downloaded model
+
+After downloading a model, it is possible to load it in OpenCLIP directly.
+For instance, if you would like to use the best ViT-B-32 MaMMUT model at 12.8B samples seen scale, run the following command:
+
+```bash
+python download_models.py --pretrain_dataset datacomp_1b --samples_seen 12.8B --model_name ViT-B-32 --model_type mammut --download_top 1
+```
+
+This will download the latest checkpoint at `download/mammut_ViT-B-32_s12.8B_dfn_2b_globalbs180224_lr0.0025_b1_0.9_b2_0.95_sched_cosine_warmup6000_gpus512/epoch_latest.pt`
+
+To use the model, first, you need to install OpenCLIP MaMMUT, a fork of OpenCLIP with MaMMUT support:
+
+```bash
+git clone https://github.com/LAION-AI/open_clip_mammut
+cd open_clip_mammut
+python -m pip install .
+```
+
+Zero-shot classification example:
+
+```python
+import torch
+from PIL import Image
+import open_clip
+
+model, _, transform = open_clip.create_model_and_transforms('mammut_ViT-B-32', pretrained='download/mammut_ViT-B-32_s12.8B_dfn_2b_globalbs180224_lr0.0025_b1_0.9_b2_0.95_sched_cosine_warmup6000_gpus512/epoch_latest.pt')
+model.eval()  # model in train mode by default, impacts some models with BatchNorm or stochastic depth active
+tokenizer = open_clip.get_tokenizer('mammut_ViT-B-32')
+
+image = transform(Image.open("image.png")).unsqueeze(0)
+text = tokenizer(["a diagram", "a dog", "a cat"])
+
+with torch.no_grad(), torch.amp.autocast('cuda'):
+    image_features = model.encode_image(image)
+    text_features = model.encode_text(text)
+    image_features /= image_features.norm(dim=-1, keepdim=True)
+    text_features /= text_features.norm(dim=-1, keepdim=True)
+
+    text_probs = (100.0 * image_features @ text_features.T).softmax(dim=-1)
+
+print("Label probs:", text_probs)  # prints: [[1., 0., 0.]]
+```
+
+Caption generation example:
+
+```python
+import open_clip
+import torch
+from PIL import Image
+
+model, _, transform = open_clip.create_model_and_transforms('mammut_ViT-B-32', pretrained='download/mammut_ViT-B-32_s12.8B_dfn_2b_globalbs180224_lr0.0025_b1_0.9_b2_0.95_sched_cosine_warmup6000_gpus512/epoch_latest.pt')
+
+im = Image.open("docs/CLIP.png").convert("RGB")
+im = transform(im).unsqueeze(0)
+
+with torch.no_grad(), torch.amp.autocast('cuda'):
+  generated = model.generate(im)
+
+print(open_clip.decode(generated[0]).split("<end_of_text>")[0].replace("<start_of_text>", ""))
+```
+
 ## Citation
 
 If you find this work helpful, please cite our paper:
