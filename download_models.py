@@ -100,6 +100,7 @@ if __name__ == "__main__":
     if args.download_top > 0:
         df = df.iloc[:args.download_top]
 
+    print(f"Downloading {len(df)} models...")
     for _, row in df.iterrows():
         if args.download_mode == "last_checkpoint":
             files = [f"epoch_{row.total_epochs}.pt"]
@@ -108,7 +109,7 @@ if __name__ == "__main__":
         else:
             raise ValueError("Invalid download mode")
 
-        print(f"Downloading {row.full_name} with ImageNet-1k zero-shot accuracy {row.acc1:.2f}")
+        print(f"Downloading {row.full_name} with ImageNet-1k zero-shot accuracy {row.acc1:.3f}")
         download_checkpoints(folder=row.full_name, files=files, output_folder=args.output_folder)
         os.symlink(
             os.path.abspath(os.path.join(args.output_folder, row.full_name, f"epoch_{row.total_epochs}.pt")), 
