@@ -64,7 +64,8 @@ HuggingFace Model Repo, with examples of model usage: [OpenMaMMUT-L-14 12.8B Dat
 
 ## Downloading model checkpoints
 
-We are currently working on uploading all model checkpoints to HuggingFace in the following repo: <https://huggingface.co/laion/scaling-laws-for-comparison>. 
+We are currently working on uploading all model checkpoints (including intermediate checkpoints) to HuggingFace in the following repo: <https://huggingface.co/laion/scaling-laws-for-comparison>.
+
 We also provide a helper script ([download_models.py](download_models.py)) to download the model checkpoints from HuggingFace.
 
 To download all models, run the following command:
