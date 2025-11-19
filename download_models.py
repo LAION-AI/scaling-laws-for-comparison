@@ -31,10 +31,9 @@ PRETRAIN_DATASETS = [
 
 MODEL_NAMES = [
     'ViT-M-32', 'ViT-L-14', 'ViT-S-32', 'ViT-B-32', 'ViT-S-16',
-    'ViT-H-14', 'ViT-B-16', 'ViT-S-32-alt', 'ViT-M-14', 'ViT-M-16',
-    'ViT-B-14', 'ViT-M-16-alt', 'ViT-S-14', 'ViT-M-32-alt',
-    'ViT-S-16-alt', 'ViT-L-32', 'ViT-L-16', 'ViT-H-16', 'ViT-H-32',
-    'ViT-B-16-text-plus'
+    'ViT-H-14', 'ViT-B-16', 'ViT-M-14', 'ViT-M-16',
+    'ViT-B-14', 'ViT-S-14', 'ViT-L-32', 'ViT-L-16', 
+    'ViT-H-16', 'ViT-H-32',
 ]
 
 MODEL_TYPES = [
