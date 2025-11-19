@@ -39,6 +39,9 @@ MODEL_NAMES = [
 MODEL_TYPES = [
     "clip",
     "mammut",
+    "coca",
+    "cap",
+    "siglip",
 ]
 
 LR_SCHEDULERS = [
