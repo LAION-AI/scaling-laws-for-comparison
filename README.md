@@ -62,6 +62,25 @@ HuggingFace Model Repo, with examples of model usage: [OpenMaMMUT-L-14 12.8B Dat
 ### Training hyperparameters
 <img src="https://cdn-uploads.huggingface.co/production/uploads/6355b485b8b79340d4630dd5/3m_kj2FTOcOkuucb1qeFd.png" alt="openmammut_hyperparams" width="40%"/>
 
+## Downloading model checkpoints
+
+We are currently working on uploading all model checkpoints to HuggingFace. 
+We also provide a script ([download_models.py](download_models.py)) to download the model checkpoints from HuggingFace.
+
+To download all models, run the following command:
+```bash
+python download_models.py
+```
+
+It is also possible to filter the models by using the arguments of the script. For example, to download only MaMMUT models trained on datacomp-1.4B dataset, with samples seen scale 1.28B, ViT-B-32 architecture, run the following command:
+```bash
+python download_models.py --samples_seen 1.28B --pretrain_dataset datacomp_1b --model_name ViT-B-32 --model_type mammut
+```
+
+By default, only last checkpoint of each model is downloaded, not intermediate checkpoints. To download intermediate checkpoints, use the `--download_mode all_checkpoints` argument.
+
+See `python download_models.py -h` for more information.
+
 ## Citation
 
 If you find this work helpful, please cite our paper:
