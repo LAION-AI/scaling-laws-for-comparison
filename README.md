@@ -94,6 +94,7 @@ For instance, if you would like to use the best ViT-B-32 MaMMUT model at 12.8B s
 ```bash
 python download_models.py --pretrain_dataset datacomp_1b --samples_seen 12.8B --model_name ViT-B-32 --model_type mammut --download_top 1
 ```
+By default, model with best ImageNet-1k zero-shot accuracy is downloaded.
 
 This will download the latest checkpoint at `download/mammut_ViT-B-32_s12.8B_dfn_2b_globalbs180224_lr0.0025_b1_0.9_b2_0.95_sched_cosine_warmup6000_gpus512/epoch_latest.pt`
 
