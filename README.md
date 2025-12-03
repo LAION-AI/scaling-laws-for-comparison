@@ -14,6 +14,10 @@ all **intermediate** checkpoints (73,768 total).
 * **Checkpoints:** Hosted on [HuggingFace](https://huggingface.co/laion/scaling-laws-for-comparison). Includes 73,768 total checkpoints. Use the [download helper script](#Downloading-all-model-checkpoints) to download the checkpoints.
 * **Evaluations:** We provide evaluation results on zero-shot classification (35 datasets), retrieval (MS-COCO), and segmentation (ADE-20K).  See [overview.ipynb](overview.ipynb) for details.
 
+## Main Results
+
+We demonstrate scaling law derivation based model and dataset comparison. As working example, we compare contrastive loss based CLIP and contrastive + text generative (captioning) loss based MaMMUT, using open datasets Re-LAION-1.4B, DataComp-1.4B and DFN-1.4B. In plots below, we illustrate consistent stronger scalability of MaMMUT across datasets and downstream tasks (zero-shot evaluation), as well as stronger performance when training on DFN-1.4B for both CLIP and MaMMUT.
+
 ### Model comparison: openCLIP and openMaMMUT
 ![image](https://github.com/user-attachments/assets/869ae40c-7f1b-4f99-928a-c41b38d90da3)
 
