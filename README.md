@@ -6,7 +6,7 @@ In this repository, we provide detailed results and code to reproduce all figure
 
 ## Release
 
-- [Nov 20, 2025] We release a total of **4686** models, which consist in all trained CLIP and MaMMUT models with cosine learning rate schedule. We release model checkpoints at [HuggingFace](https://huggingface.co/laion/scaling-laws-for-comparison), which include all intermediate checkpoints. It covers 15 model scales, 12 samples seen scales, 3 pre-trained datasets (DataComp, Re-LAION, DFN).
+- [Nov 20, 2025] We release a total of **4686** models, which consist in all trained CLIP and MaMMUT models with cosine learning rate schedule. We release model checkpoints at [HuggingFace](https://huggingface.co/laion/scaling-laws-for-comparison), which include not only the last checkpoint of each model but also all **intermediate** checkpoints. The release covers 15 model scales, 12 samples seen scales, 3 pre-trained datasets (DataComp, Re-LAION, DFN).
   
 ## Main Results
 We demonstrate scaling law derivation based model and dataset comparison. As working example, we compare contrastive loss based CLIP and contrastive + text generative (captioning) loss based MaMMUT, using open datasets Re-LAION-1.4B, DataComp-1.4B and DFN-1.4B. In plots below, we illustrate consistent stronger scalability of MaMMUT across datasets and downstream tasks (zero-shot evaluation), as well as stronger performance when training on DFN-1.4B for both CLIP and MaMMUT.  
