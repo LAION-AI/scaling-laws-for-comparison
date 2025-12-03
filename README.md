@@ -4,6 +4,10 @@
 
 In this repository, we provide detailed results and code to reproduce all figures from the paper.
 
+## Release
+
+- [Nov 20, 2025] We release a total of **4686** models, which consist in all trained CLIP and MaMMUT models in [HuggingFace](https://huggingface.co/laion/scaling-laws-for-comparison) with all intermediate checkpoints
+  
 ## Main Results
 We demonstrate scaling law derivation based model and dataset comparison. As working example, we compare contrastive loss based CLIP and contrastive + text generative (captioning) loss based MaMMUT, using open datasets Re-LAION-1.4B, DataComp-1.4B and DFN-1.4B. In plots below, we illustrate consistent stronger scalability of MaMMUT across datasets and downstream tasks (zero-shot evaluation), as well as stronger performance when training on DFN-1.4B for both CLIP and MaMMUT.  
 
