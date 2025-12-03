@@ -12,7 +12,7 @@ We release **4,686 models** (CLIP and MaMMUT) on [HuggingFace](https://huggingfa
 all **intermediate** checkpoints (73,768 total).
 
 * **Checkpoints:** Hosted on [HuggingFace](https://huggingface.co/laion/scaling-laws-for-comparison). Includes 73,768 total checkpoints. Use the [download helper script](#Downloading-all-model-checkpoints) to download the checkpoints.
-* **Evaluations:** We provide evaluation results on zero-shot classification (35 datasets), retrieval (MS-COCO), and segmentation (ADE-20K) for all checkpoints.  See [overview.ipynb](overview.ipynb] for details.
+* **Evaluations:** We provide evaluation results on zero-shot classification (35 datasets), retrieval (MS-COCO), and segmentation (ADE-20K).  See [overview.ipynb](overview.ipynb) for details.
 
 ### Model comparison: openCLIP and openMaMMUT
 ![image](https://github.com/user-attachments/assets/869ae40c-7f1b-4f99-928a-c41b38d90da3)
