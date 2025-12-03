@@ -8,16 +8,15 @@ In this repository, we provide detailed results and code to reproduce all figure
 
 ### [Nov 20, 2025]
 
-We have released a total of **4,686 models**, consisting of all trained CLIP and MaMMUT models using cosine learning rate schedule.
+We release a total of **4,686 models** on  [HuggingFace](https://huggingface.co/laion/scaling-laws-for-comparison), consisting of all trained CLIP and MaMMUT models using cosine learning rate schedule.
 
 **Release Highlights:**
-* **Checkpoints:** Available on HuggingFace. Includes the last checkpoint and all intermediate checkpoints (**73,768 total**).
-* **Scope:** Covers 15 model scales and 11 samples seen scales.
-* **Pre-training Datasets:** DataComp, Re-LAION, and DFN.
+* **Checkpoints:** Available on [HuggingFace](https://huggingface.co/laion/scaling-laws-for-comparison). Includes not only the last checkpoint of each model but also all **intermediate** checkpoints (**73,768 total**).
+* **Scope:** Covers 15 model scales and 11 samples seen scales, 3 pre-training datasets (DataComp, Re-LAION, and DFN).
 * **Downloads:** Use our [helper script here](#Downloading-all-model-checkpoints) to download the models.
 
 **Evaluations:**
-We also provide evaluations for all models (including intermediate checkpoints) on downstream tasks:
+We also release evaluations for all models (including intermediate checkpoints of each model) on downstream tasks:
 * **Zero-shot classification:** 35 datasets (DataComp evaluation suite).
 * **Zero-shot retrieval:** MS-COCO.
 * **Segmentation:** ADE-20K.
