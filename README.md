@@ -6,7 +6,7 @@ In this repository, we provide detailed results and code to reproduce all figure
 
 ## Release
 
-### [Nov 20, 2025] Release
+### [Nov 20, 2025] 
 
 We release **4,686 models** (CLIP and MaMMUT) on [HuggingFace](https://huggingface.co/laion/scaling-laws-for-comparison), including not only last checkpoint of each model but also 
 all **intermediate** checkpoints (73,768 total).
